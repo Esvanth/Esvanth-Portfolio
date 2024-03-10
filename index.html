@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Esvanth's Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Piazzolla:opsz,wght@8..30,200;8..30,300;8..30,400;8..30,900&family=Poppins:wght@400;700&family=Roboto:ital,wght@1,700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background-color: rgb(52, 84, 79);
+        color: white;
+        font-family: "Poppins", sans-serif;
+      }
+      nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 80px;
+        background-color: rgb(145, 104, 121);
+      }
+      nav ul {
+        display: flex;
+        justify-content: center;
+      }
+      nav ul li {
+        list-style: none;
+        margin: 0 23px;
+      }
+      nav ul li a {
+        text-decoration: none;
+        color: white;
+      }
+      nav ul li a:hover {
+        color: rgb(156, 157, 230);
+        font-size: 1.05rem;
+      }
+      main hr{
+        border: 0;
+        background: #9c97f1;
+        height: 1.2px;
+        margin: 130px 84px;
+      }
+      .left {
+        font-size: 1.5rem;
+      }
+      .firstSection {
+        display: flex;
+        justify-content: space-around;
+        margin: 80px 0;
+      }
+      .firstSection > div {
+        width: 30%;
+      }
+      .leftSection {
+        font-size: 3rem;
+      }  
+      .leftSection .buttons{
+        padding: 50px 0;
+      }
+      .leftSection .btn {
+        padding: 12px;
+        background: #1e2167;
+        color: white;
+        border: 2px solid white;
+        border-radius: 6px;
+        font-size: 20px;
+        cursor: pointer;
+      }
+      .rightSection img {
+        width: 80%;
+        margin: 15% 0;
+      }
+      .purple {
+        color: rgb(175, 111, 235);
+      }
+      .text-gray{
+        color: gray;
+      }
+      #element {
+        color: rgb(175, 111, 235);
+      }
+      .secondSection{
+        max-width: 80vw;
+        margin: auto;
+        height: 80vh;
+      }
+      .secondSection h1{
+        font-size: 1.9rem;
+      }
+      .secondSection .box{
+        background: white;
+        width: 77vw;
+        height: 2px;
+        margin: 56px 0;
+        display: flex;
+      }
+      .secondSection .vertical{
+        height: 93px;
+        width: 1px;
+        background-color: white;
+        margin: 0 120px;
+      }
+      .image-top{
+        width: 23px;
+        position: relative;
+        top: -32px;
+        left: -9px;
+      }
+      .vertical-title{
+        position: relative;
+        top: 75px;
+        width: 150px;
+        font-size: 14px;
+      }
+      .vertical-desc{
+        position: relative;
+        top: 86px;
+        color: gray;
+        width: 150px;
+        font-size: 9px;
+      }
+footer {
+    background-color: #0e0e1a;
+    padding: 40px 0;
+}
+.footer {
+    display: flex;
+    justify-content: space-around;
+}
+.footer-item {
+    width: 30%;
+    padding: 20px;
+}
+.footer-item h2 {
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+.social-icons {
+    display: flex;
+    gap: 20px;
+}
+.social-icons a img {
+    width: 30px;
+}
+.newsletter-form {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+.newsletter-form input[type="email"] {
+    padding: 8px;
+    width: 70%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.newsletter-form button {
+    background-color: #1e2167;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 15px;
+    cursor: pointer;
+}
+.footer-rights {
+    text-align: center;
+    color: gray;
+    padding: 20px 0;
+}
+@media screen and (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(18, 18, 62);
+    position: absolute;
+    width: 100%;
+    top: 80px;
+    left: 0;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+  }
+  nav ul.active {
+    transform: translateX(0);
+  }
+  nav ul li {
+    margin: 15px 0;
+  }
+  nav ul li a:hover {
+    color: rgb(156, 157, 230);
+    font-size: 1rem;
+  }
+  .right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(18, 18, 62);
+    width: 100%;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+  }
+  .right.active {
+    transform: translateX(0);
+  }
+  .firstSection {
+    flex-direction: column;
+    align-items: center;
+    margin: 40px 0;
+  }
+  .firstSection > div {
+    width: 80%;
+  }
+  .rightSection img {
+    width: 100%;
+    margin: 20% 0;
+  }
+  .secondSection .box {
+    flex-direction: column;
+    align-items: center;
+    margin: 30px 0;
+  }
+  .vertical {
+    margin: 10px 0;
+    text-align: center;
+  }
+  .vertical-title {
+    top: 0;
+  }
+  .vertical-desc {
+    top: 0;
+    width: auto;
+    text-align: center;
+  }
+  .footer {
+    flex-direction: column;
+    padding: 20px;
+  }
+  .footer-item {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .footer-rights {
+    padding: 10px 0;
+  }
+}
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="left">Esvanth's Portfolio</div>
+        <div class="right">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact us</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="Project.html">project</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div id="" class="section"></div>
+      <section class="firstSection">
+        <div class="leftSection">
+          Hi, My name is <span class="purple">Esvanth</span>
+          <div>and I am a passionate web developer</div>
+          <div class="image-container">
+            <img src="img/Profile.jpg"  class="animated-image">
+          </div>
+          <span id="element"></span>
+          <div class="buttons">
+          <a href="Esvanth resume 5.pdf" download><button class="btn">Download Resume</button></a>
+          <a href="https://github.com/Esvanthmessi"><button class="btn">Visit Github</button></a>
+          <a href="https://www.linkedin.com//in/esvanth-m-960553231"><button class="btn">Visit Linkedin</button></a>
+
+        </div>
+    </div>
+      </section>     
+    </main>
+    <footer>
+      <div class="footer">
+          <div class="footer-item">
+              <h2>Contact Info</h2>
+              <p>Phone: 6369051038</p>
+              <br> 
+            </br>
+              <p>email: esvanth7@gmail.com</p>
+          </div>
+          <div class="footer-item">
+              <h2>Follow Me</h2>
+              <div class="social-icons">
+               
+                  <a href="https://github.com/Esvanthmessi"><img src="img/git.png" alt="Twitter"></a>
+                  <a href="https://www.linkedin.com//in/esvanth-m-960553231"><img src="img/linkedin.png" alt="LinkedIn"></a> 
+                  <a href="https://www.instagram.com//in/esvanth7"><img src="img/Instagram.jpeg" alt="Instagram"></a>       
+              </div>
+          </div>
+      <div class="footer-rights">
+          <p>&copy; Esvanth's Portfolio. All rights reserved.</p>
+      </div>
+  </footer>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+      var typed = new Typed("#element", {
+        strings: ["Web Developer",  "Problem solver" ],
+        typeSpeed: 60,
+      });
+    </script>
+  </body>
+</html>
